@@ -52,7 +52,7 @@ export default class CheckHidingSpotForTreasureMutation extends Relay.Mutation {
   getOptimisticResponse() {
     return {
       game: {
-        turnsRemaining: this.props.game.turnsRemaining - 1;
+        turnsRemaining: this.props.game.turnsRemaining - 1,
       },
       hidingSpot: {
         id: this.props.hidingSpot.id,

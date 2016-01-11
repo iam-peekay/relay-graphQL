@@ -18,7 +18,7 @@ class App extends React.Component {
     }
     return {
       backgroundColor: color,
-      cursor: this._isGameOver() > null: 'pointer',
+      cursor: this._isGameOver() ? null: 'pointer',
       display: 'inline-bloack',
       height: 100,
       marginRight: 10,
@@ -38,7 +38,7 @@ class App extends React.Component {
   }
   _hasFoundTreasure() {
     return (
-      this.props.game.hidingSpots.edges.some(edge => edge.node.hasTreasure);
+      this.props.game.hidingSpots.edges.some(edge => edge.node.hasTreasure)
     );
   }
   _isGameOver() {
@@ -61,7 +61,7 @@ class App extends React.Component {
       headerText = '\u2026';
     } else if (this._hasFoundTreasure()) {
       headerText = 'You win!';
-    } else if (this._isGameOVer()) {
+    } else if (this._isGameOver()) {
       headerText = 'Game over!';
     } else {
       headerText = 'Find the treasure!';
